@@ -14,7 +14,11 @@ const OUTDIR = pub > 0 ? path.join(SITE, process.argv[pub + 1] || 'dist') : SITE
 if (OUTDIR !== SITE) {
   fs.rmSync(OUTDIR, { recursive: true, force: true });
   const skip = new Set(['vercel.json', path.basename(OUTDIR), NAME + '.zip', '.vercel', 'work']);
-  fs.cpSync(SITE, OUTDIR, { recursive: true, filter: s => !skip.has(path.basename(s)) });
+  fs.mkdirSync(OUTDIR, { recursive: true });
+  for (const e of fs.readdirSync(SITE)) {   // entry by entry: OUTDIR sits inside SITE
+    if (skip.has(e)) continue;
+    fs.cpSync(path.join(SITE, e), path.join(OUTDIR, e), { recursive: true, filter: s => !skip.has(path.basename(s)) });
+  }
 }
 const OUT = path.join(OUTDIR, NAME + '.zip');
 const SKIP = new Set(['.tools', '__pycache__', 'node_modules', '.DS_Store', '.git']);
