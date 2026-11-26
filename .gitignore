@@ -18,3 +18,4 @@ site/demo/work/
 
 # built by Vercel at deploy time (tools/build_zip.cjs)
 site/animation-explainer-creator.zip
+site/dist/

@@ -1,13 +1,22 @@
-// Build site/animation-explainer-creator.zip from skill/animation-explainer-creator (one top folder).
+// Build the skill zip (one top folder) from skill/animation-explainer-creator.
 // Vercel runs this on every deploy (site/vercel.json), so the zip always matches the skill in the repo.
 // No dependencies: a plain deflate zip written with node:zlib.
-// usage: node tools/build_zip.cjs
+// usage: node tools/build_zip.cjs                  -> site/animation-explainer-creator.zip (local preview)
+//        node tools/build_zip.cjs --publish dist   -> copy site/ to site/dist (without vercel.json) plus the zip
 const fs = require('fs'), path = require('path'), zlib = require('zlib');
 
 const NAME = 'animation-explainer-creator';
 const ROOT = path.resolve(__dirname, '..');
+const SITE = path.join(ROOT, 'site');
 const SRC = path.join(ROOT, 'skill', NAME);
-const OUT = path.join(ROOT, 'site', NAME + '.zip');
+const pub = process.argv.indexOf('--publish');
+const OUTDIR = pub > 0 ? path.join(SITE, process.argv[pub + 1] || 'dist') : SITE;
+if (OUTDIR !== SITE) {
+  fs.rmSync(OUTDIR, { recursive: true, force: true });
+  const skip = new Set(['vercel.json', path.basename(OUTDIR), NAME + '.zip', '.vercel', 'work']);
+  fs.cpSync(SITE, OUTDIR, { recursive: true, filter: s => !skip.has(path.basename(s)) });
+}
+const OUT = path.join(OUTDIR, NAME + '.zip');
 const SKIP = new Set(['.tools', '__pycache__', 'node_modules', '.DS_Store', '.git']);
 
 const crcTable = Array.from({ length: 256 }, (_, n) => { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1; return c >>> 0; });
@@ -48,4 +57,4 @@ const cd = Buffer.concat(central), end = Buffer.alloc(22);
 end.writeUInt32LE(0x06054b50, 0); end.writeUInt16LE(files.length, 8); end.writeUInt16LE(files.length, 10);
 end.writeUInt32LE(cd.length, 12); end.writeUInt32LE(offset, 16);
 fs.writeFileSync(OUT, Buffer.concat([...parts, cd, end]));
-console.log(`build_zip: ${files.length} files, ${Math.round(fs.statSync(OUT).size / 1024)} KB -> site/${NAME}.zip`);
+console.log(`build_zip: ${files.length} files, ${Math.round(fs.statSync(OUT).size / 1024)} KB -> ${path.relative(ROOT, OUT)}`);
