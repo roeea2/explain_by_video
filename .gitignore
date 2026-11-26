@@ -1,0 +1,20 @@
+# Vercel link and local tooling
+.vercel
+node_modules/
+__pycache__/
+.tools/
+.DS_Store
+
+# local working folders (the published demo is site/demo)
+demo-pendulum/
+checks/
+site/demo/work/
+
+# never commit keys
+.env
+.env.*
+*.key
+*.pem
+
+# built by Vercel at deploy time (tools/build_zip.cjs)
+site/animation-explainer-creator.zip

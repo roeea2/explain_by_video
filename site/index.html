@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Animation Explainer Creator · סרטוני הסבר מונפשים</title>
+<meta name="description" content="סקיל ל-Claude Code שהופך נושא, תדריך מעבדה או סיכום לסרטון הסבר מונפש עם קריינות טבעית בעברית, פרקים, כתוביות ותמליל, עמוד אינטרנט מוכן ו-MP4.">
+<!-- og -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://animation-explainer-creator.vercel.app/">
+<meta property="og:site_name" content="Animation Explainer Creator">
+<meta property="og:title" content="Animation Explainer Creator · סרטוני הסבר מונפשים">
+<meta property="og:description" content="סקיל ל-Claude Code: נושא או תדריך נכנס, סרטון הסבר מונפש עם קריינות טבעית בעברית יוצא. עמוד אינטרנט מוכן ו-MP4.">
+<meta property="og:image" content="https://animation-explainer-creator.vercel.app/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="פריים מסרטון ההדגמה: גרף של ריבוע זמן המחזור כפונקציה של אורך המטוטלת">
+<meta property="og:locale" content="he_IL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Animation Explainer Creator · סרטוני הסבר מונפשים">
+<meta name="twitter:description" content="סקיל ל-Claude Code: נושא או תדריך נכנס, סרטון הסבר מונפש עם קריינות טבעית בעברית יוצא.">
+<meta name="twitter:image" content="https://animation-explainer-creator.vercel.app/og.jpg">
+<!-- /og -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Hebrew:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="demo/film.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#0e1821"/><path d="M11 9v14l12-7z" fill="#ff9d4d"/></svg><span>Animation Explainer Creator</span></a>
+    <nav aria-label="חלקי העמוד"><a href="#demo">דמו</a><a href="#get">מה מקבלים</a><a href="#how">איך זה עובד</a><a href="#install">התקנה</a><a href="https://github.com/roeea2/explain_by_video" rel="noopener">GitHub</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="kicker">סקיל ל-Claude Code · עברית מימין לשמאל · MIT</p>
+    <h1>סרטוני הסבר מונפשים,<br>מצוירים בקוד</h1>
+    <p class="lede">נותנים נושא, תדריך מעבדה או סיכום, ומקבלים סרטון עם קריינות טבעית, פרקים, כתוביות ותמליל: עמוד אינטרנט מוכן ו-MP4. בלי מודל וידאו ובלי צילומים, כל פריים מצויר בקוד, והתמונה מחכה לקול.</p>
+    <div class="cta">
+      <a class="btn primary" href="animation-explainer-creator.zip" download>הורדת הסקיל (zip)</a>
+      <a class="btn" href="#demo">לצפייה בדמו</a>
+      <a class="btn" href="https://github.com/roeea2/explain_by_video" rel="noopener">קוד המקור ב-GitHub</a>
+    </div>
+  </section>
+
+  <section id="demo" class="sec">
+    <div class="sec-head"><h2>דמו: המטוטלת הפשוטה</h2><p>הסרטון הזה נוצר עם הסקיל: חמישה פרקים, ארבעה עשר משפטי קריינות, שתי דקות. לחצו על נגן, קפצו בין הפרקים, או השתיקו את הקריינות.</p></div>
+    <div id="film"></div>
+    <p class="demo-links"><a href="demo/index.html">העמוד המלא עם התמליל</a><span aria-hidden="true">·</span><a href="demo/pendulum.mp4" download>הורדת ה-MP4 (6 MB)</a><span aria-hidden="true">·</span><a href="demo/pendulum.srt" download>כתוביות SRT</a></p>
+    <div class="proof">
+      <span class="proof-k">בשימוש אמיתי</span>
+      <p>המנוע נבנה בשביל <a href="https://maabada-heker.vercel.app" rel="noopener">מעבדות חקר</a>: שבעה סרטונים לשבע מעבדות הבגרות בפיזיקה, עם קריינות, שאלות ופרק "מודל מול מציאות" בכל מעבדה.</p>
+    </div>
+  </section>
+
+  <section id="get" class="sec">
+    <div class="sec-head"><h2>מה מקבלים</h2></div>
+    <div class="cells">
+      <div class="cell"><b>עמוד אינטרנט מוכן</b><p>נגן עם פרקים, כתוביות, מהירות ניגון, מסך מלא, ותמליל שאפשר לקפוץ ממנו לכל משפט. עובד גם בלי אינטרנט ובכל אחסון סטטי.</p></div>
+      <div class="cell"><b>קריינות שלא נשמעת כמו רובוט</b><p>קול נוירוני (Gemini TTS) בעברית טבעית, בטון של מורה. כל קטע מתומלל בחזרה ומושווה לטקסט, וקטע לא תקין מוקלט מחדש.</p></div>
+      <div class="cell"><b>MP4 וכתוביות</b><p>וידאו 1080p עם פס כתוביות וקובץ SRT, לוואטסאפ, ליוטיוב או למצגת. הייצוא מצייר כל פריים בדיוק כמו הנגן.</p></div>
+      <div class="cell"><b>עברית ונוסחאות</b><p>טקסט מימין לשמאל עם מספרים, יחידות ונוסחאות בסדר הנכון: <span class="num">9.8 m/s²</span>, <span class="math">T = 2π√(L/g)</span>, אינדקסים וחזקות.</p></div>
+      <div class="cell"><b>מודל מול מציאות</b><p>בנושאי מדע, פרק סיום שמפרט כל הנחה של המודל, מה המעבדה האמיתית מוסיפה, ואיך רואים את זה בנתונים.</p></div>
+      <div class="cell"><b>שינויים זולים</b><p>כל סצנה היא קוד: משנים מספר או משפט ומקבלים סרטון מעודכן. רק משפט קריינות שהשתנה מוקלט מחדש.</p></div>
+    </div>
+  </section>
+
+  <section id="how" class="sec">
+    <div class="sec-head"><h2>איך זה עובד</h2><p>Claude עובד לפי סדר קבוע, ובודק את העבודה שלו לפני שהוא מוסר.</p></div>
+    <ol class="flow">
+      <li><b>שאלות</b><span>נושא וחומר, קהל, שפה, אורך, קריינות, ומה למסור.</span></li>
+      <li><b>תסריט קודם</b><span>פרקים, כתוביות וטקסט לקריין. אתם מאשרים לפני שמתחילים לצייר.</span></li>
+      <li><b>ציור בקוד</b><span>כל סצנה היא פונקציה של הזמן, עם ערכת עזרים: טקסט, תוויות, חצים, נוסחאות, גרפים, טבלאות ומכשירי מעבדה.</span></li>
+      <li><b>בדיקה אוטומטית</b><span>שגיאות, טקסט שיוצא מהמסגרת, טקסט חופף, גלישה בטלפון. ואז Claude מסתכל על גיליונות של כל הפריימים.</span></li>
+      <li><b>קריינות</b><span>הקלטה, תמלול בחזרה והשוואה לטקסט. קטע לא תקין מוקלט שוב.</span></li>
+      <li><b>תזמון</b><span>הקול הוא השעון. הבודק מציע תזמון חדש כך ששום אנימציה לא מואטת.</span></li>
+      <li><b>מסירה</b><span>עמוד אינטרנט, MP4 עם כתוביות, ואם תבקשו, העלאה ל-Vercel אחרי בדיקת חשיפה.</span></li>
+    </ol>
+  </section>
+
+  <section id="install" class="sec">
+    <div class="sec-head"><h2>התקנה</h2><p>הסקיל מותקן בתוך תיקיית הפרויקט, לא גלובלית. מהטרמינל, מתוך תיקיית הפרויקט:</p></div>
+    <div class="code"><button type="button" class="copy" data-copy="c1">העתקה</button><pre id="c1" dir="ltr">mkdir -p .claude/skills &amp;&amp; curl -fsSL -o aec.zip https://animation-explainer-creator.vercel.app/animation-explainer-creator.zip &amp;&amp; unzip -q aec.zip -d .claude/skills &amp;&amp; rm aec.zip</pre></div>
+    <p class="sub">או עם git, ישר מהמאגר ב-GitHub:</p>
+    <div class="code"><button type="button" class="copy" data-copy="c3">העתקה</button><pre id="c3" dir="ltr">git clone --depth 1 https://github.com/roeea2/explain_by_video.git aec-src &amp;&amp; mkdir -p .claude/skills &amp;&amp; cp -R aec-src/skill/animation-explainer-creator .claude/skills/ &amp;&amp; rm -rf aec-src</pre></div>
+    <p class="sub">או להדביק ב-Claude Code, מתוך תיקיית הפרויקט:</p>
+    <div class="code"><button type="button" class="copy" data-copy="c2">העתקה</button><pre id="c2">התקן בפרויקט הזה את הסקיל animation-explainer-creator: הורד את
+<span class="ltr">https://animation-explainer-creator.vercel.app/animation-explainer-creator.zip</span>
+ופתח אותו לתוך <span class="ltr">.claude/skills</span> של הפרויקט (לא בהתקנה גלובלית). בדוק ש-<span class="ltr">Node 18+</span>, <span class="ltr">Python 3.10+</span> ו-ffmpeg מותקנים, ואמור לי אם חסר משהו.</pre></div>
+    <p class="sub">אחר כך פותחים מחדש את Claude Code בתיקיית הפרויקט, ומבקשים:</p>
+    <ul class="asks">
+      <li>תעשה סרטון הסבר מונפש על חוק שני של ניוטון לכיתה י"א, עם קריינות</li>
+      <li>תהפוך את תדריך המעבדה בקובץ הזה לסרטון של שתי דקות</li>
+      <li>סרטון קצר באנגלית על מחזור המים לכיתה ה', בלי קריינות</li>
+      <li>תייצא את הסרטון ל-MP4</li>
+    </ul>
+    <div class="req">
+      <b>דרישות</b>
+      <p>Node 18 ומעלה · Python 3.10 ומעלה · ffmpeg · Playwright לבדיקות ולייצוא (הסקיל מוצא עותק קיים או מסביר איך להתקין) · לקריינות: מפתח Gemini API משלכם. בלי מפתח הסרטון שקט עם כתוביות, והסקיל שואל לפני שהוא שולח טקסט ל-Google.</p>
+    </div>
+  </section>
+
+  <section class="sec en" lang="en" dir="ltr">
+    <div class="sec-head"><h2>In English</h2></div>
+    <p>Animation Explainer Creator is a project-scoped Claude Code skill that makes narrated explainer films drawn in code on an HTML canvas, with no video model and no footage. Claude writes the script for your approval, draws every scene as a function of time, checks each frame for errors, text outside the frame and overlapping text, records the narration with Gemini TTS and verifies every clip by transcribing it back, and lets the picture wait for the voice. You get a web page with chapters, captions and a clickable transcript, and an MP4 with subtitles. Hebrew and other right-to-left languages are first-class.</p>
+  </section>
+
+  <footer class="foot"><span>MIT © 2026 RoeeAI</span><span><a href="https://github.com/roeea2/explain_by_video" rel="noopener">GitHub</a> · <a href="animation-explainer-creator.zip" download>הורדת הסקיל</a></span></footer>
+</main>
+
+<script src="demo/narration.js"></script>
+<script src="demo/film.js"></script>
+<script src="demo/scenes.js"></script>
+<script>
+  Film.mount(document.getElementById('film'), { scenes: FILM.scenes, lang: FILM.lang, label: 'סרטון: ' + FILM.title, narration: { base: 'demo/audio/', dur: window.NARRATION } });
+  document.querySelectorAll('.copy').forEach(b => b.addEventListener('click', () => {
+    const txt = document.getElementById(b.dataset.copy).textContent;
+    (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject()).then(() => { b.textContent = 'הועתק'; setTimeout(() => { b.textContent = 'העתקה'; }, 1600); }, () => {});
+  }));
+</script>
+</body>
+</html>

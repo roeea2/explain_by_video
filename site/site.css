@@ -1,0 +1,70 @@
+/* Landing page for the skill. Builds on demo/film.css (tokens, player). */
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  background-color: var(--paper);
+  background-image: linear-gradient(rgba(31, 111, 92, .06) 1px, transparent 1px), linear-gradient(90deg, rgba(31, 111, 92, .06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.wrap { max-width: 1080px; margin-inline: auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+.top { position: sticky; top: 0; z-index: 9; background: color-mix(in srgb, var(--sheet) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule); }
+.top-in { display: flex; align-items: center; gap: 16px; min-height: 56px; flex-wrap: wrap; padding-block: 6px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: var(--ink); text-decoration: none; direction: ltr; }
+.brand svg { width: 28px; height: 28px; }
+.top nav { display: flex; gap: 4px; flex-wrap: wrap; margin-inline-start: auto; }
+.top nav a { text-decoration: none; color: var(--ink-2); padding: 5px 12px; border-radius: 999px; font-size: 15px; font-weight: 500; }
+.top nav a:hover { background: color-mix(in srgb, var(--accent) 10%, transparent); color: var(--ink); }
+
+.hero { padding-block: 56px 30px; display: grid; gap: 14px; }
+.kicker { margin: 0; font-size: 14px; font-weight: 600; letter-spacing: .04em; color: var(--pen); }
+.hero h1 { margin: 0; font-size: clamp(40px, 7vw, 76px); line-height: 1.02; font-weight: 700; text-wrap: balance; }
+.lede { margin: 0; font-size: 20px; color: var(--ink-2); max-width: 64ch; text-wrap: pretty; }
+.cta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+.btn { display: inline-flex; align-items: center; min-height: 46px; padding: 0 20px; border-radius: 10px; border: 1px solid var(--rule); background: var(--sheet); color: var(--ink); text-decoration: none; font-weight: 600; }
+.btn:hover { border-color: var(--ink-2); }
+.btn.primary { background: var(--ink); color: var(--sheet); border-color: var(--ink); }
+.btn.primary:hover { opacity: .9; }
+
+.sec { padding-block: 40px; border-top: 1px dashed var(--rule); }
+.sec-head { margin-bottom: 18px; }
+.sec-head h2 { margin: 0 0 6px; font-size: 32px; line-height: 1.2; text-wrap: balance; }
+.sec-head p { margin: 0; color: var(--ink-2); max-width: 70ch; }
+.demo-links { display: flex; flex-wrap: wrap; gap: 8px 12px; margin: 12px 2px 0; font-size: 15px; color: var(--muted); }
+.proof { margin-top: 22px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 14px; align-items: baseline; padding: 14px 18px; border: 1px solid var(--rule); border-radius: 12px; background: var(--sheet); }
+.proof-k { font-size: 13px; font-weight: 600; color: var(--pen); white-space: nowrap; }
+.proof p { margin: 0; }
+
+.cells { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.cell { background: var(--sheet); border: 1px solid var(--rule); border-radius: 12px; padding: 16px 18px; }
+.cell b { display: block; font-size: 18px; margin-bottom: 4px; }
+.cell p { margin: 0; color: var(--ink-2); font-size: 16px; }
+
+.flow { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; counter-reset: f; }
+.flow li { counter-increment: f; position: relative; display: grid; gap: 2px; padding: 12px 18px; padding-inline-start: 62px; background: var(--sheet); border: 1px solid var(--rule); border-radius: 12px; }
+.flow li::before { content: counter(f); position: absolute; inset-inline-start: 16px; top: 13px; width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: var(--sheet); display: grid; place-items: center; font: 600 14px var(--f-mono); }
+.flow b { font-size: 17px; }
+.flow span { color: var(--ink-2); font-size: 16px; }
+
+.code { position: relative; background: var(--screen); color: var(--screen-ink); border-radius: 12px; }
+.code pre { margin: 0; padding: 16px 18px; padding-inline-end: 96px; white-space: pre-wrap; word-break: break-word; font: 500 14px/1.6 var(--f-mono); }
+.code pre:not([dir="ltr"]) { font-family: var(--f-body); font-size: 15px; }
+.copy { position: absolute; top: 10px; inset-inline-end: 10px; height: 32px; padding: 0 12px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, .2); background: transparent; color: var(--screen-ink); font: 500 13px var(--f-body); cursor: pointer; }
+.copy:hover { background: rgba(255, 255, 255, .08); }
+.code pre[dir="ltr"] { padding-left: 96px; padding-right: 18px; }
+.sub { margin: 18px 0 8px; color: var(--ink-2); }
+.asks { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.asks li { background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; padding: 10px 14px; }
+.asks li::before { content: "› "; color: var(--pen); font-weight: 700; }
+.req { margin-top: 22px; padding: 14px 18px; border-inline-start: 4px solid var(--accent); background: var(--sheet); border-radius: 0 10px 10px 0; }
+.req p { margin: 4px 0 0; color: var(--ink-2); }
+.en p { color: var(--ink-2); max-width: 75ch; margin: 0; }
+.foot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding-block: 22px 40px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 14px; }
+
+@media (max-width: 560px) {
+  .hero { padding-block: 34px 20px; }
+  .lede { font-size: 18px; }
+  .top nav a { padding: 4px 8px; font-size: 14px; }
+  .proof { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .flow li { padding-inline-start: 56px; }
+}

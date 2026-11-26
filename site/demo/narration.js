@@ -1,0 +1,2 @@
+/* recorded narration: { "<scene>-<caption>": [file, seconds] } (written by scripts/tts.py) */
+window.NARRATION = {"intro-0":["5121aed53b40",9.21],"setup-0":["97742a19a5e0",6.5],"setup-1":["ee23d3504fad",5.61],"setup-2":["60c033882952",6.08],"measure-0":["8c6b525ed1e1",5.02],"measure-1":["7f9eb423c0d2",10.49],"measure-2":["56ba809e98d3",11.62],"graph-0":["225bb24470d8",11.06],"graph-1":["88030f1eee40",7.89],"graph-2":["88786452687c",11.09],"ideal-0":["75aac2de9447",5.35],"ideal-1":["88470ff9cdbf",9.87],"ideal-2":["c8fb7b817bf7",8.62],"ideal-3":["ab79eb1e0e2e",7.6]};
